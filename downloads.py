@@ -8,6 +8,7 @@ def organize_downloads(download_folder, destination_folder):
     files = os.listdir(download_folder)
 
     for file in files:
+        print(file)
         file_path = os.path.join(download_folder, file)
 
         if os.path.isfile(file_path):
