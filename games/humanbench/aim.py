@@ -1,4 +1,3 @@
-import time
 import pyautogui
 from PIL import ImageGrab
 import keyboard 
