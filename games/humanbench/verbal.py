@@ -1,7 +1,6 @@
 from PIL import ImageGrab
 import pytesseract
 import pyautogui
-import time
 
 top_left = (410, 400)
 bottom_right = (1371, 507)
@@ -19,7 +18,6 @@ def read_text(words):
         pyautogui.moveTo(new_button[0], new_button[1])
         pyautogui.click()
         words.add(result)
-    time.sleep(0.1)
     read_text(words)
 
 if __name__ == '__main__':
