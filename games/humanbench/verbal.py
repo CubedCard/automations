@@ -1,6 +1,9 @@
 from PIL import ImageGrab
 import pytesseract
 import pyautogui
+import sys
+
+sys.setrecursionlimit(100000)
 
 top_left = (410, 400)
 bottom_right = (1371, 507)
