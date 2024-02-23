@@ -44,5 +44,4 @@ def create_new_problem(title, description):
 problem_url = sys.argv[1]
 problem_url = problem_url.replace("description/", "")
 title, description = extract_problem_description(problem_url)
-print(title, description)
 create_new_problem(title, description)
