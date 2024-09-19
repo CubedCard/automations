@@ -1,6 +1,7 @@
 import ssl
 from pytube import YouTube
 import sys
+import traceback
 
 def download_video(url, output_path='/Users/jipderksen/Downloads'):
     try:
@@ -11,6 +12,7 @@ def download_video(url, output_path='/Users/jipderksen/Downloads'):
         print("Download completed successfully!")
     except Exception as e:
         print("Error:", e)
+        traceback.print_exc()
 
 def progress_function(stream, chunk, bytes_remaining):
     total_size = stream.filesize
