@@ -17,15 +17,13 @@ ascii_art = """
 
 @click.command()
 def main():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
     colours = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 
     while True:
         for colour in colours:
+            os.system('cls' if os.name == 'nt' else 'clear')
             type_ascii(colour)
             time.sleep(1)
-            os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def type_ascii(colour):
