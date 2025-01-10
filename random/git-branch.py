@@ -3,10 +3,11 @@ import pyperclip
 
 def generate_branch_name(title: str, number: str) -> str:
     """
-    Generates a branch name in the format 'feature/<number>-<sanitized-title>'.
+    Generates a branch name in the format 'feature/sif-<number>-<sanitized-title>'.
     """
     sanitized_title = re.sub(r'[^a-zA-Z0-9-]', '', title.replace(" ", "-")).lower()
-    return f"feature/{number}-{sanitized_title}"
+    sanitized_title = re.sub(r'-+', '-', sanitized_title)
+    return f"feature/sif-{number}-{sanitized_title}"
 
 def main():
     try:
